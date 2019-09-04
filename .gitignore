@@ -1,9 +1,0 @@
-jenkins
-pgdata
-ramdisk
-esdata/nodes
-selenoid/video
-empty.txt
-nginx/conf.d/default.conf
-grid-router/quota/demo.xml
-variables.env
