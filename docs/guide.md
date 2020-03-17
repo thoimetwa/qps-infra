@@ -1,8 +1,8 @@
 # QPS-Infra - Guide
-## Features
+### Features
 Describe Features here
 
-## Easy to Use Jenkins
+### Easy to Use Jenkins
 ### 1:Update Jenkins credentials
 * ## Preconditions:
 
@@ -27,8 +27,8 @@ Describe Features here
 8.Save changes
 
 
-## 2:RegisterOrganization
-* ## Preconditions:
+### 2:RegisterOrganization
+ Preconditions:
 
 1.Jenkins is started          
 
@@ -38,7 +38,7 @@ Describe Features here
 
 4.Open Management_Jobs folder e.g.http://54.193.74.120/jenkins/job/Management_Jobs/
 
-* ## Steps: 
+ Steps: 
                                                       
 
 1.Tap on Register Organization
@@ -72,11 +72,11 @@ rm -rf ./jenkins/.groovy/grapes
 * Expected Result: Pipeline RegisterOrganization is done
 
 ## 3:RegisterRepository
-* ## Preconditions:
+ Preconditions:
 
 Open my organization that was created e.g. jenkins/okamara
 
-* ## Steps:  
+ Steps:  
 
 1.Tap RegisterRepository
 
@@ -107,7 +107,7 @@ onPullRequest-carina-demo
 onPullRequest-carina-demo
 
 
-## 4:Create fork via Github
+### 4:Create fork via Github
 * ## Preconditions:
 Github account is created for you
 
@@ -126,14 +126,14 @@ Github account is created for you
   * Expected Result:okamara/carina-demo repository is created
 
 ## 5:Configure Webhook via GitHub
-* ## Preconditions:
+Preconditions:
 
 Instruction is here http://54.193.74.120/jenkins/job/okamara/job/carina-demo/job/onPullRequest-carina-demo-trigger/
 
 or 
 Open https://github.com
 
-* ## Steps:  
+Steps:  
 
 1.Sign in with your user account
 
@@ -153,14 +153,14 @@ Open https://github.com
 
 9.Click "Add webhook" button
 
-  * Expected Result:Webhook is created
+  Expected Result:Webhook is created
   
-## 6:Send Pull request via github  
-* ## Preconditions:
+### 6:Send Pull request via github  
+ Preconditions:
 
 Open jenkins/configure e.g. http://54.193.74.120/jenkins/configure
 
-* ## Steps:
+Steps:
 
 1.Go to GitHub Pull Request Builder
 
@@ -175,11 +175,11 @@ test for jenkins #1 https://github.com/okamara/carina-demo/pull/1 enter “1”
 
 6.Verify that comment is set via Pull request
 
-## 7:Close/Restart Pull request via github
-* ## Preconditions:
+### 7:Close/Restart Pull request via github
+ Preconditions:
 Open pull request in GitHub https://github.com/okamara/carina-demo/pull/1
 
-* ## Steps:
+ Steps:
 
 1.Tap “Close pull request”
 
@@ -187,11 +187,11 @@ Open pull request in GitHub https://github.com/okamara/carina-demo/pull/1
 
 3.Verify that carina-demo jobs run is done on e.g. 1. http://54.193.74.120/jenkins/job/okamara/job/carina-demo/
 
-* Expected Result:The following jobs are run onPullRequest-carina-demo-trigger and 
+ Expected Result:The following jobs are run onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo 
 
-##  Workaround to run jobs without errors(.m2 folder)
-* ## Preconditions:
+###  Workaround to run jobs without errors(.m2 folder)
+ Preconditions:
 
 If onPullRequest-carina-demo and onPullRequest-carina-demo-trigger job run with errors like e.g.
 [ERROR] Could not create local repository at /var/jenkins_home/.m2/repository -> [Help 1]
@@ -200,7 +200,7 @@ If onPullRequest-carina-demo and onPullRequest-carina-demo-trigger job run with 
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
 [ERROR]
 
-* ## Steps:
+ Steps:
 
 1.Run the following commands via terminal:
 sudo chown -R ubuntu:ubuntu ~/.m2
@@ -211,13 +211,13 @@ docker-compose rm -fv
 
 2.Stop/Resend pull request via github and verify that jobs onPullRequest-carina-demo and onPullRequest-carina-demo-trigger run without errors
  
-## Workaround for "Error grabbing Grapes"(.m2) during create organization or start jobs
-* ## Preconditions:
+### Workaround for "Error grabbing Grapes"(.m2) during create organization or start jobs
+ Preconditions:
 
 If onPullRequest-carina-demo and onPullRequest-carina-demo-trigger job run with errors like e.g.
 [ERROR] General error during conversion: Error grabbing Grapes -- [download failed: org.beanshell#bsh;2.0b4!bsh.jar]
 
-* ## Steps:
+ Steps:
 
 1.remove completely $HOME/.m2/repository and QPS_HONE/jenkins/.groovy/grapes content to allow jenkins to redownload everything from scratch
 
@@ -228,14 +228,14 @@ cd ~/tools/qps-infra
 rm -rf ./jenkins/.groovy/grapes
 ./start.sh
 
-## 8:Run Web-Demo-Test job(should be failed)
-* ## Preconditions:
+### 8:Run Web-Demo-Test job(should be failed)
+ Preconditions:
 
 Jenkins is started
 Organization is created
 Repo is registered
 
-* ## Steps:
+ Steps:
 
 1.Go to qaprosoft/carina-demo and start Web-Demo-Test
 
@@ -255,14 +255,14 @@ Repo is registered
 
 6.Click "Logs" and verify that the report had status "failed"
 
-## 9:Run API-Demo-Test job(should be passed)
-* ## Preconditions:
+### 9:Run API-Demo-Test job(should be passed)
+ Preconditions:
 
 Jenkins is started
 Organization is created
 Repo is registered
 
-* ## Steps:
+ Steps:
 
 1.Go to qaprosoft/carina-demo and start API-Demo-Test job
 
@@ -280,14 +280,14 @@ Repo is registered
 
 5.Click "Logs" and verify that the report looks correctly
 
-## 10:Run nightly_regression job(should be passed)
-* ## Preconditions:
+### 10:Run nightly_regression job(should be passed)
+ Preconditions:
 
 Jenkins is started
 Organization is created
 Repo is registered
 
-* ## Steps:
+ Steps:
 
 1.Go to qaprosoft/carina-demo and start nightly_regression job
 
@@ -302,22 +302,22 @@ Repo is registered
 4.Go to qaprosoft/carina-demo and verify that API-Demo-Test, API-DataProvider, SOAP-Demo,Tags-Demo-Test,API-CustomParams, Web-Demo-Single-Driver are completed and Passed.
 Web-Demo-Test is completed and failed.
 
-## 11:Run full_regression job(need to stop mobile jobs to complete this task)
-* ## Preconditions:
+### 11:Run full_regression job(need to stop mobile jobs to complete this task)
+ Preconditions:
 
 Jenkins is started
 Organization is created
 Repo is registered
 
-* ## Steps:
+ Steps:
 
 1.Go to qaprosoft/carina-demo and start full_regression job
 
-* Expected Result:Full_regression job is opened
+ Expected Result:Full_regression job is opened
 
 2.Click Build with Parameters and run Build
 
-* Expected Result:Pipeline full_regression job is started
+ Expected Result:Pipeline full_regression job is started
 
 3.Open Jenkins and verify that web tests are running in web node
 
