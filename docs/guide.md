@@ -4,11 +4,11 @@ Describe Features here
 
 ### Easy to Use Jenkins
 ### 1:Update Jenkins credentials
-* ## Preconditions:
+ Preconditions:
 
   Jenkins is installed and started
  
-* ## Steps:
+ Steps:
 
 1.Open Jenkins
 
@@ -45,31 +45,31 @@ Describe Features here
 
 Expected Result: Pipeline RegisterOrganization is opened
 
-2.Tap Build with Parameters in right top menu
+2. Tap Build with Parameters in right top menu
 
-3.Enter folder name - select your name e.g. okamara
+3. Enter folder name - select your name e.g. okamara
 
-4.Tap Build
+4. Tap Build
 
 * Expected Result: Organization is registered and new folder e.g. okamara appears in Jenkins(http://54.193.74.120/jenkins/)
 
-5.If error appears in console 
+5. If error appears in console 
 A: remove completely $HOME/.m2/repository and QPS_HONE/jenkins/.groovy/grapes content to allow jenkins to redownload everything from scratch
 
 * Expected Result: Go to step 6-8
 
-6.Open Terminal and run the following commands:
+6. Open Terminal and run the following commands:
 sudo rm -rf ~/.m2/repository
 cd ~/qps-infra
 rm -rf ./jenkins/.groovy/grapes
 
-7.Restart Jenking in web via url e.g. http://54.193.74.120/jenkins/restart
+7. Restart Jenking in web via url e.g. http://54.193.74.120/jenkins/restart
 
-* Expected Result: Jenkins is restarted
+Expected Result: Jenkins is restarted
 
-8.Repeat Register organization steps 1-4
+8. Repeat Register organization steps 1-4
 
-* Expected Result: Pipeline RegisterOrganization is done
+ Expected Result: Pipeline RegisterOrganization is done
 
 ## 3:RegisterRepository
  Preconditions:
@@ -78,52 +78,52 @@ Open my organization that was created e.g. jenkins/okamara
 
  Steps:  
 
-1.Tap RegisterRepository
+1. Tap RegisterRepository
 
-* Expected Result:Pipeline RegisterRepository page is opened
+ Expected Result:Pipeline RegisterRepository page is opened
 
-2.Verify that the following values are preset up in the fields:
+2. Verify that the following values are preset up in the fields:
 scmHost - github.com,
 scmOrg is entered e.g. okamara,
 branch - master,
 pipelineLibrary - QPS-Pipeline,
 runnerClass - com.qaprosoft.jenkins.pipeline.runner.maven.QARunner
 
-* Expected Result:The following values are preset up in the fields: scmHost - github.com, scmOrg is entered e.g. okamara , branch - master, pipelineLibrary - QPS-Pipeline, runnerClass - com.qaprosoft.jenkins.pipeline.runner.maven.QARunner
+Expected Result: The following values are preset up in the fields: scmHost - github.com, scmOrg is entered e.g. okamara , branch - master, pipelineLibrary - QPS-Pipeline, runnerClass - com.qaprosoft.jenkins.pipeline.runner.maven.QARunner
 
-3.Enter scmuser - e.g. okamara,
+3. Enter scmuser - e.g. okamara,
 scmTocken - enter your token (should be generated on 
 gihub for your user),
 repo - e.g. ”carina-demo”
 
-4.Tap Build
+4. Tap Build
 
-* Expected Result:Build is successful
+Expected Result:Build is successful
 
-5.Verify that jenkins/okamara/carina-demo/ contains jobs: onPullRequest-carina-demo-trigger and 
+5. Verify that jenkins/okamara/carina-demo/ contains jobs: onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo
 
-* Expected Result:jenkins/okamara/carina-demo/ contains jobs: onPullRequest-carina-demo-trigger and 
+Expected Result:jenkins/okamara/carina-demo/ contains jobs: onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo
 
 
 ### 4:Create fork via Github
-* ## Preconditions:
+ Preconditions:
 Github account is created for you
 
-* ## Steps:  
+ Steps:  
 
-1.Sign in to Github with your user account https://github.com/
+1. Sign in to Github with your user account https://github.com/
 
-2.Open My profile
+2. Open My profile
 
-3.Go to qaprosoft/carina-demo
+3. Go to qaprosoft/carina-demo
 
-4.Tap Fork
+4. Tap Fork
 
-5.Verify that okamara/carina-demo repository is created
+5. Verify that okamara/carina-demo repository is created
 
-  * Expected Result:okamara/carina-demo repository is created
+  Expected Result:okamara/carina-demo repository is created
 
 ## 5:Configure Webhook via GitHub
 Preconditions:
@@ -135,23 +135,23 @@ Open https://github.com
 
 Steps:  
 
-1.Sign in with your user account
+1. Sign in with your user account
 
-2.Open created before your repository e.g. okamara/carina-demo https://github.com/okamara/carina-demo
+2. Open created before your repository e.g. okamara/carina-demo https://github.com/okamara/carina-demo
 
-3.Open Settings
+3. Open Settings
 
-4.Open Webhooks in menu
+4. Open Webhooks in menu
 
-5.Tap Add Webhook
+5. Tap Add Webhook
 
-6.Enter Payload URL e.g. http://54.193.74.120/jenkins/ghprbhook/
+6. Enter Payload URL e.g. http://54.193.74.120/jenkins/ghprbhook/
 
-7.Select application/x-www-form-urlencoded in "Content Type" field
+7. Select application/x-www-form-urlencoded in "Content Type" field
 
-8.Select "Let me select individual events" with "Issue comments" and "Pull requests enabled" option
+8. Select "Let me select individual events" with "Issue comments" and "Pull requests enabled" option
 
-9.Click "Add webhook" button
+9. Click "Add webhook" button
 
   Expected Result:Webhook is created
   
@@ -162,18 +162,18 @@ Open jenkins/configure e.g. http://54.193.74.120/jenkins/configure
 
 Steps:
 
-1.Go to GitHub Pull Request Builder
+1. Go to GitHub Pull Request Builder
 
-2.Add check mark to Test adding comment to Pull Request
+2. Add check mark to Test adding comment to Pull Request
 
-3.Set in Issue ID of Pull request from Git e.g.
+3. Set in Issue ID of Pull request from Git e.g.
 test for jenkins #1 https://github.com/okamara/carina-demo/pull/1 enter “1”
 
-4.Enter Comment to post e.g. “Comment”
+4. Enter Comment to post e.g. “Comment”
 
-5.Tap “Comment to Issue”
+5. Tap “Comment to Issue”
 
-6.Verify that comment is set via Pull request
+6. Verify that comment is set via Pull request
 
 ### 7:Close/Restart Pull request via github
  Preconditions:
@@ -181,11 +181,11 @@ Open pull request in GitHub https://github.com/okamara/carina-demo/pull/1
 
  Steps:
 
-1.Tap “Close pull request”
+1. Tap “Close pull request”
 
-2.Tap “Reopen pull request”
+2. Tap “Reopen pull request”
 
-3.Verify that carina-demo jobs run is done on e.g. 1. http://54.193.74.120/jenkins/job/okamara/job/carina-demo/
+3. Verify that carina-demo jobs run is done on e.g. 1. http://54.193.74.120/jenkins/job/okamara/job/carina-demo/
 
  Expected Result:The following jobs are run onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo 
@@ -202,14 +202,14 @@ If onPullRequest-carina-demo and onPullRequest-carina-demo-trigger job run with 
 
  Steps:
 
-1.Run the following commands via terminal:
+1. Run the following commands via terminal:
 sudo chown -R ubuntu:ubuntu ~/.m2
 sudo chmod -R a+rws ~/.m2
 ./stop.sh
 docker-compose rm -fv
 ./start.sh
 
-2.Stop/Resend pull request via github and verify that jobs onPullRequest-carina-demo and onPullRequest-carina-demo-trigger run without errors
+2. Stop/Resend pull request via github and verify that jobs onPullRequest-carina-demo and onPullRequest-carina-demo-trigger run without errors
  
 ### Workaround for "Error grabbing Grapes"(.m2) during create organization or start jobs
  Preconditions:
@@ -219,7 +219,7 @@ If onPullRequest-carina-demo and onPullRequest-carina-demo-trigger job run with 
 
  Steps:
 
-1.remove completely $HOME/.m2/repository and QPS_HONE/jenkins/.groovy/grapes content to allow jenkins to redownload everything from scratch
+1. remove completely $HOME/.m2/repository and QPS_HONE/jenkins/.groovy/grapes content to allow jenkins to redownload everything from scratch
 
 Run the following commands via terminal:
 ./stop.sh
@@ -237,23 +237,23 @@ Repo is registered
 
  Steps:
 
-1.Go to qaprosoft/carina-demo and start Web-Demo-Test
+1. Go to qaprosoft/carina-demo and start Web-Demo-Test
 
-* Expected Result:Pipeline Web-Demo-Test is opened
+Expected Result:Pipeline Web-Demo-Test is opened
 
-2.Click Build with Parameters and run Build
+2. Click Build with Parameters and run Build
 
-* Expected Result: Pipeline Web-Demo-Test is started
+ Expected Result: Pipeline Web-Demo-Test is started
 
-3.Open Jenkins and verify that web tests are running in web node
+3. Open Jenkins and verify that web tests are running in web node
 
-4.Open Build History in Web-Demo-Test and select Zafira Report
+4. Open Build History in Web-Demo-Test and select Zafira Report
 
-* Expected Result:Zafira report Web-demo-test in opened
+Expected Result:Zafira report Web-demo-test in opened
 
-5.Verify that Web-Demo-Test should be failed
+5. Verify that Web-Demo-Test should be failed
 
-6.Click "Logs" and verify that the report had status "failed"
+6. Click "Logs" and verify that the report had status "failed"
 
 ### 9:Run API-Demo-Test job(should be passed)
  Preconditions:
@@ -264,21 +264,21 @@ Repo is registered
 
  Steps:
 
-1.Go to qaprosoft/carina-demo and start API-Demo-Test job
+1. Go to qaprosoft/carina-demo and start API-Demo-Test job
 
-* Expected Result:Pipeline API-Demo-Test job is opened
+Expected Result:Pipeline API-Demo-Test job is opened
 
-2.Click Build with Parameters and run Build
+2. Click Build with Parameters and run Build
 
-* Expected Result:Pipeline API-Demo-Test job is started
+Expected Result:Pipeline API-Demo-Test job is started
 
-3.Open Jenkins and verify that web tests are running in web node
+3. Open Jenkins and verify that web tests are running in web node
 
-4.Open Build History in API-Demo-Test and select Zafira Report
+4. Open Build History in API-Demo-Test and select Zafira Report
 
-* Expected Result:
+Expected Result:
 
-5.Click "Logs" and verify that the report looks correctly
+5. Click "Logs" and verify that the report looks correctly
 
 ### 10:Run nightly_regression job(should be passed)
  Preconditions:
@@ -289,20 +289,20 @@ Repo is registered
 
  Steps:
 
-1.Go to qaprosoft/carina-demo and start nightly_regression job
+1. Go to qaprosoft/carina-demo and start nightly_regression job
 
-* Expected Result:Nightly_regression job is opened
+Expected Result: Nightly_regression job is opened
 
-2.Click Build with Parameters and run Build
+2. Click Build with Parameters and run Build
 
-* Expected Result:Pipeline Nightly_regression is started
+Expected Result: Pipeline Nightly_regression is started
 
-3.Open Jenkins and verify that web tests are running in web node
+3. Open Jenkins and verify that web tests are running in web node
 
-4.Go to qaprosoft/carina-demo and verify that API-Demo-Test, API-DataProvider, SOAP-Demo,Tags-Demo-Test,API-CustomParams, Web-Demo-Single-Driver are completed and Passed.
+4. Go to qaprosoft/carina-demo and verify that API-Demo-Test, API-DataProvider, SOAP-Demo,Tags-Demo-Test,API-CustomParams, Web-Demo-Single-Driver are completed and Passed.
 Web-Demo-Test is completed and failed.
 
-### 11:Run full_regression job(need to stop mobile jobs to complete this task)
+### 11: Run full_regression job(need to stop mobile jobs to complete this task)
  Preconditions:
 
 Jenkins is started
@@ -311,17 +311,17 @@ Repo is registered
 
  Steps:
 
-1.Go to qaprosoft/carina-demo and start full_regression job
+1. Go to qaprosoft/carina-demo and start full_regression job
 
  Expected Result:Full_regression job is opened
 
-2.Click Build with Parameters and run Build
+2. Click Build with Parameters and run Build
 
  Expected Result:Pipeline full_regression job is started
 
-3.Open Jenkins and verify that web tests are running in web node
+3. Open Jenkins and verify that web tests are running in web node
 
-4.Go to qaprosoft/carina-demo and verify that API-Demo-Test, API-DataProvider-Classes, SOAP-Demo, Tags-Demo-Test, API-CustomParams, Web-Demo-Single-Driver-Test, Mobile-Android-Demo-Test, Mobile-iOS-Demo-Test are completed and Passed.
+4. Go to qaprosoft/carina-demo and verify that API-Demo-Test, API-DataProvider-Classes, SOAP-Demo, Tags-Demo-Test, API-CustomParams, Web-Demo-Single-Driver-Test, Mobile-Android-Demo-Test, Mobile-iOS-Demo-Test are completed and Passed.
 Web-Demo-Test, API-DataProvider-Classes are completed and failed.
 
 
