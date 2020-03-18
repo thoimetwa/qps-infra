@@ -1,4 +1,4 @@
-# QPS-Infra - Guide
+# QPS-Infra - Configuration Guide
 ### Features
 Describe Features here
 
