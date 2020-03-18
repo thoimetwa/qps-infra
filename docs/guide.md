@@ -18,7 +18,7 @@ Describe Features here
 
 4.Click on Update in the left menu
 
-5.Enter Username e.g."okamara"
+5.Enter Username e.g."username"
 
 6.Near Password click Change password
 
@@ -47,16 +47,16 @@ Expected Result: Pipeline RegisterOrganization is opened
 
 2. Tap Build with Parameters in right top menu
 
-3. Enter folder name - select your name e.g. okamara
+3. Enter folder name - select your name e.g. "organization"
 
 4. Tap Build
 
-* Expected Result: Organization is registered and new folder e.g. okamara appears in Jenkins(http://54.193.74.120/jenkins/)
+<b> Expected Result:</b> Organization is registered and new folder e.g. "organization" appears in Jenkins
 
 5. If error appears in console 
 A: remove completely $HOME/.m2/repository and QPS_HONE/jenkins/.groovy/grapes content to allow jenkins to redownload everything from scratch
 
-* Expected Result: Go to step 6-8
+<b> Expected Result:</b> Go to step 6-8
 
 6. Open Terminal and run the following commands:
 sudo rm -rf ~/.m2/repository
@@ -65,11 +65,11 @@ rm -rf ./jenkins/.groovy/grapes
 
 7. Restart Jenking in web via url .../jenkins/restart
 
-Expected Result: Jenkins is restarted
+<b> Expected Result:</b> Jenkins is restarted
 
 8. Repeat Register organization steps 1-4
 
- Expected Result: Pipeline RegisterOrganization is done
+ <b> Expected Result:</b> Pipeline RegisterOrganization is done
 
 ## 3:RegisterRepository
  Preconditions:
@@ -80,7 +80,7 @@ Open my organization that was created e.g. jenkins/okamara
 
 1. Tap RegisterRepository
 
- Expected Result:Pipeline RegisterRepository page is opened
+ <b> Expected Result:</b> Pipeline RegisterRepository page is opened
 
 2. Verify that the following values are preset up in the fields:
 scmHost - github.com,
@@ -89,7 +89,7 @@ branch - master,
 pipelineLibrary - QPS-Pipeline,
 runnerClass - com.qaprosoft.jenkins.pipeline.runner.maven.QARunner
 
-Expected Result: The following values are preset up in the fields: scmHost - github.com, scmOrg is entered e.g. okamara , branch - master, pipelineLibrary - QPS-Pipeline, runnerClass - com.qaprosoft.jenkins.pipeline.runner.maven.QARunner
+<b> Expected Result:</b> The following values are preset up in the fields: scmHost - github.com, scmOrg is entered e.g. okamara , branch - master, pipelineLibrary - QPS-Pipeline, runnerClass - com.qaprosoft.jenkins.pipeline.runner.maven.QARunner
 
 3. Enter scmuser - e.g. okamara,
 scmTocken - enter your token (should be generated on 
@@ -98,12 +98,12 @@ repo - e.g. ”carina-demo”
 
 4. Tap Build
 
-Expected Result:Build is successful
+<b> Expected Result:</b> Build is successful
 
 5. Verify that carina-demo contains jobs: onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo
 
-Expected Result:carina-demo contains jobs: onPullRequest-carina-demo-trigger and 
+<b> Expected Result:</b> carina-demo contains jobs: onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo
 
 
@@ -123,7 +123,7 @@ Github account is created for you
 
 5. Verify that organization/carina-demo repository is created
 
-  Expected Result:organization/carina-demo repository is created
+  <b> Expected Result:</b> organization/carina-demo repository is created
 
 ## 5:Configure Webhook via GitHub
 Preconditions:
@@ -134,7 +134,7 @@ Steps:
 
 1. Sign in with your user account
 
-2. Open created before your repository e.g. okamara/carina-demo 
+2. Open created before your repository e.g. organization/carina-demo 
 
 3. Open Settings
 
@@ -150,7 +150,7 @@ Steps:
 
 9. Click "Add webhook" button
 
-  Expected Result:Webhook is created
+  <b> Expected Result:</b> Webhook is created
   
 ### 6:Send Pull request via github  
  Preconditions:
@@ -174,7 +174,7 @@ test for jenkins #1 https://github.com/okamara/carina-demo/pull/1 enter “1”
 
 ### 7:Close/Restart Pull request via github
  Preconditions:
-Open pull request in GitHub https://github.com/okamara/carina-demo/pull/1
+Open pull request in GitHub 
 
  Steps:
 
@@ -184,7 +184,7 @@ Open pull request in GitHub https://github.com/okamara/carina-demo/pull/1
 
 3. Verify that carina-demo jobs run is done
 
- Expected Result:The following jobs are run onPullRequest-carina-demo-trigger and 
+ <b> Expected Result:</b> The following jobs are run onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo 
 
 ###  Workaround to run jobs without errors(.m2 folder)
@@ -246,7 +246,7 @@ Expected Result:Pipeline Web-Demo-Test is opened
 
 4. Open Build History in Web-Demo-Test and select Zafira Report
 
-Expected Result:Zafira report Web-demo-test in opened
+<b> Expected Result:</b> Zafira report Web-demo-test in opened
 
 5. Verify that Web-Demo-Test should be failed
 
@@ -263,17 +263,17 @@ Repo is registered
 
 1. Go to qaprosoft/carina-demo and start API-Demo-Test job
 
-Expected Result:Pipeline API-Demo-Test job is opened
+<b> Expected Result:</b> Pipeline API-Demo-Test job is opened
 
 2. Click Build with Parameters and run Build
 
-Expected Result:Pipeline API-Demo-Test job is started
+<b> Expected Result:</b> Pipeline API-Demo-Test job is started
 
 3. Open Jenkins and verify that web tests are running in web node
 
 4. Open Build History in API-Demo-Test and select Zafira Report
 
-Expected Result:
+<b> Expected Result:</b>
 
 5. Click "Logs" and verify that the report looks correctly
 
@@ -288,11 +288,11 @@ Repo is registered
 
 1. Go to qaprosoft/carina-demo and start nightly_regression job
 
-Expected Result: Nightly_regression job is opened
+<b> Expected Result:</b> Nightly_regression job is opened
 
 2. Click Build with Parameters and run Build
 
-Expected Result: Pipeline Nightly_regression is started
+<b> Expected Result:</b> Pipeline Nightly_regression is started
 
 3. Open Jenkins and verify that web tests are running in web node
 
@@ -310,11 +310,11 @@ Repo is registered
 
 1. Go to qaprosoft/carina-demo and start full_regression job
 
- Expected Result:Full_regression job is opened
+ <b> Expected Result:</b> Full_regression job is opened
 
 2. Click Build with Parameters and run Build
 
- Expected Result:Pipeline full_regression job is started
+ <b> Expected Result:</b> Pipeline full_regression job is started
 
 3. Open Jenkins and verify that web tests are running in web node
 
