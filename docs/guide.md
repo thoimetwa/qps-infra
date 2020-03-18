@@ -8,7 +8,7 @@ Describe Features here
 
   Jenkins is installed and started
  
- Steps:
+<b> Steps:</b>
 
 1.Open Jenkins
 
@@ -32,11 +32,11 @@ Describe Features here
 
 1.Jenkins is started          
 
-2.Open Jenkins e.g. http://54.193.74.120/jenkins/ 
+2.Open Jenkins in Browser 
 
 3.Open jenkins/configure and change value of branch QPS_PIPELINE_GIT_BRANCH to “master”
 
-4.Open Management_Jobs folder e.g.http://54.193.74.120/jenkins/job/Management_Jobs/
+4.Open Management_Jobs folder 
 
  Steps: 
                                                       
@@ -63,7 +63,7 @@ sudo rm -rf ~/.m2/repository
 cd ~/qps-infra
 rm -rf ./jenkins/.groovy/grapes
 
-7. Restart Jenking in web via url e.g. http://54.193.74.120/jenkins/restart
+7. Restart Jenking in web via url .../jenkins/restart
 
 Expected Result: Jenkins is restarted
 
@@ -100,10 +100,10 @@ repo - e.g. ”carina-demo”
 
 Expected Result:Build is successful
 
-5. Verify that jenkins/okamara/carina-demo/ contains jobs: onPullRequest-carina-demo-trigger and 
+5. Verify that carina-demo contains jobs: onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo
 
-Expected Result:jenkins/okamara/carina-demo/ contains jobs: onPullRequest-carina-demo-trigger and 
+Expected Result:carina-demo contains jobs: onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo
 
 
@@ -121,23 +121,20 @@ Github account is created for you
 
 4. Tap Fork
 
-5. Verify that okamara/carina-demo repository is created
+5. Verify that organization/carina-demo repository is created
 
-  Expected Result:okamara/carina-demo repository is created
+  Expected Result:organization/carina-demo repository is created
 
 ## 5:Configure Webhook via GitHub
 Preconditions:
 
-Instruction is here http://54.193.74.120/jenkins/job/okamara/job/carina-demo/job/onPullRequest-carina-demo-trigger/
-
-or 
 Open https://github.com
 
 Steps:  
 
 1. Sign in with your user account
 
-2. Open created before your repository e.g. okamara/carina-demo https://github.com/okamara/carina-demo
+2. Open created before your repository e.g. okamara/carina-demo 
 
 3. Open Settings
 
@@ -145,7 +142,7 @@ Steps:
 
 5. Tap Add Webhook
 
-6. Enter Payload URL e.g. http://54.193.74.120/jenkins/ghprbhook/
+6. Enter Payload URL e.g. .../jenkins/ghprbhook/
 
 7. Select application/x-www-form-urlencoded in "Content Type" field
 
@@ -158,7 +155,7 @@ Steps:
 ### 6:Send Pull request via github  
  Preconditions:
 
-Open jenkins/configure e.g. http://54.193.74.120/jenkins/configure
+Open jenkins/configure e.g. .../jenkins/configure
 
 Steps:
 
@@ -185,7 +182,7 @@ Open pull request in GitHub https://github.com/okamara/carina-demo/pull/1
 
 2. Tap “Reopen pull request”
 
-3. Verify that carina-demo jobs run is done on e.g. 1. http://54.193.74.120/jenkins/job/okamara/job/carina-demo/
+3. Verify that carina-demo jobs run is done
 
  Expected Result:The following jobs are run onPullRequest-carina-demo-trigger and 
 onPullRequest-carina-demo 
