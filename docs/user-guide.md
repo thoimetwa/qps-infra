@@ -61,7 +61,7 @@ Steps:
 ```
 <parameter name="scheduling" value="H 2 * * *" /> 
 ```
-Note: As a value provide regular Jenkins Cron expression.To prganize multiple schedules use "\n" as separator:
+* Note: As a value provide regular Jenkins Cron expression.To prganize multiple schedules use "\n" as separator:
 ```
 <parameter name="scheduling" value="H 2 * * *\nH 10 * * *" /> 
 ```
@@ -95,7 +95,7 @@ Jenkins Pipeline Cron - this is a job that can include different suites/jobs and
 * Commit and merge.
 * After Scan is finished (automatic or manual) Carina-Demo-Regression-Pipeline cron job is created in Jenkins.
 * Every time you run Carina-Demo-Regression-Pipeline job it should start your suite xml child job twice for DEMO and PROD environments using appropriate branches.
-Note: Any param values pairs can be provided. Comma separated - for single job params. Semicolon separated for multiple child job params.
+* Note: Any param values pairs can be provided. Comma separated - for single job params. Semicolon separated for multiple child job params.
 
 #### Run a Cron
 Steps:
