@@ -65,7 +65,7 @@ Note: As a value provide regular Jenkins Cron expression.To prganize multiple sc
 ```
 <parameter name="scheduling" value="H 2 * * *\nH 10 * * *" /> 
 ```
-4. Commit and merge.
+3. Commit and merge.
 
 #### Delete a Job
 
