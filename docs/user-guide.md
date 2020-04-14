@@ -47,18 +47,6 @@ Jenkins Pipeline Job - this is a job that can be created for each suite and can 
 3. Commit and merge.
 4. You will see "Job1" Job after Scan is finished (automatic or manual). 
 </br>
-Example:
-```
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="1" name="Demo Tests - API Sample" parallel="tests" annotations="JDK">
-	<parameter name="suiteOwner" value="qpsdemo"/>
-	<parameter name="zafira_project" value="UNKNOWN"/>
-	<parameter name="jenkinsJobName" value="Job1"/>
-	<parameter name="jenkinsJobType" value="api"/>
-        <parameter name="jenkinsEmail" value="test@qaprosoft.com"/>
-	<parameter name="jenkinsEnvironments" value="DEMO"/>
-</suite>
-```
 
 #### Run a Job
 Steps:
