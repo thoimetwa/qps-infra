@@ -35,8 +35,8 @@ Jenkins Pipeline Job - this is a job that can be created for each suite and can 
 
 #### Create a Job
 
-1. Open TestNG suite xml file
-2. Fill the bunch of necessary parameters in your xml:
+* Open TestNG suite xml file
+* Fill the bunch of necessary parameters in your xml:
 ```
 <parameter name="suiteOwner" value="qpsdemo"/>
 <parameter name="jenkinsJobName" value="Job1"/>
@@ -44,8 +44,8 @@ Jenkins Pipeline Job - this is a job that can be created for each suite and can 
 <parameter name="jenkinsEmail" value="test@qaprosoft.com"/>
 <parameter name="jenkinsEnvironments" value="DEMO"/> 
 ```
-3. Commit and merge.
-4. You will see "Job1" Job after Scan is finished (automatic or manual). 
+* Commit and merge.
+* You will see "Job1" Job after Scan is finished (automatic or manual). 
 
 #### Run a Job
 Steps:
@@ -56,8 +56,8 @@ Steps:
 4. When Job is Completed analyze published reports/logs (Carina reports/Zafira reports/TestNG reports)
 
 #### Schedule a Job
-1. Open TestNG suite xml file
-2. Fill the bunch of necessary parameters in your xml if they are absent:
+* Open TestNG suite xml file
+* Fill the bunch of necessary parameters in your xml if they are absent:
 ```
 <parameter name="scheduling" value="H 2 * * *" /> 
 ```
@@ -65,7 +65,7 @@ Note: As a value provide regular Jenkins Cron expression.To prganize multiple sc
 ```
 <parameter name="scheduling" value="H 2 * * *\nH 10 * * *" /> 
 ```
-3. Commit and merge.
+* Commit and merge.
 
 #### Delete a Job
 
@@ -77,24 +77,24 @@ Note: As a value provide regular Jenkins Cron expression.To prganize multiple sc
 Jenkins Pipeline Cron - this is a job that can include different suites/jobs and can be executed on demand or by schedule.
 
 #### Create a Cron
-1. Open each TestNG suite xml file(s) 
-2. Declare "jenkinsRegressionPipeline" property in xml:
+* Open each TestNG suite xml file(s) 
+* Declare "jenkinsRegressionPipeline" property in xml:
 ```
 <parameter name="jenkinsRegressionPipeline" value="nightly_regression, full_regression"/>
 ```
-3. Commit and merge.
-4. After Scan is finished (automatic or manual) nightly_regression, full_regression crons are created in Jenkins.
+* Commit and merge.
+* After Scan is finished (automatic or manual) nightly_regression, full_regression crons are created in Jenkins.
 
 ##### How to Set up Configuration Matrix
-1. Open TestNG suite xml file 
-2. Declare "jenkinsRegressionMatrix" property in xml:
+* Open TestNG suite xml file 
+* Declare "jenkinsRegressionMatrix" property in xml:
 ```
 <parameter name="jenkinsRegressionPipeline" value="Carina-Demo-Regression-Pipeline"/>
 <parameter name="jenkinsRegressionMatrix" value="env: DEMO, branch: master; env:PROD, branch: prod"/>
 ```
-3. Commit and merge.
-4. After Scan is finished (automatic or manual) Carina-Demo-Regression-Pipeline cron job is created in Jenkins.
-5. Every time you run Carina-Demo-Regression-Pipeline job it should start your suite xml child job twice for DEMO and PROD environments using appropriate branches.
+* Commit and merge.
+* After Scan is finished (automatic or manual) Carina-Demo-Regression-Pipeline cron job is created in Jenkins.
+* Every time you run Carina-Demo-Regression-Pipeline job it should start your suite xml child job twice for DEMO and PROD environments using appropriate branches.
 Note: Any param values pairs can be provided. Comma separated - for single job params. Semicolon separated for multiple child job params.
 
 #### Run a Cron
@@ -107,14 +107,14 @@ Note: There is a "CRON" view for such kind of jobs
 4. When Cron Job is Completed analyze children jobs' reports/logs (Carina reports/Zafira reports/TestNG reports)
 
 #### Schedule a Cron
-1. Open any child TestNG suite xml file 
-2. Declare "jenkinsRegressionScheduling" parameter :
+* Open any child TestNG suite xml file 
+* Declare "jenkinsRegressionScheduling" parameter :
 ```
 <parameter name="jenkinsRegressionPipeline" value="Carina-Demo-Regression-Pipeline"/>
 <parameter name="jenkinsRegressionScheduling" value="H 2 * * *" /> 
 ```
-3. Commit and merge.
-4. After Scan is finished (automatic or manual) Carina-Demo-Regression-Pipeline is created and sheduled to run periodically in Jenkins.
+* Commit and merge.
+* After Scan is finished (automatic or manual) Carina-Demo-Regression-Pipeline is created and sheduled to run periodically in Jenkins.
 
 #### Delete a Cron
 
