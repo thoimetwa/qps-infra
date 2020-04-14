@@ -47,7 +47,7 @@ Jenkins Pipeline Job - this is a job that can be created for each suite and can 
 3. Commit and merge.
 4. You will see "Job1" Job after Scan is finished (automatic or manual). 
 </br>
-<b> Example: </b>
+Example:
 ```
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="1" name="Demo Tests - API Sample" parallel="tests" annotations="JDK">
