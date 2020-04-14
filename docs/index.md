@@ -17,19 +17,6 @@ QPS-Infra is a dockerized QA infrastructure solution for Test Automation. It is 
 
 ![Alt text](https://raw.githubusercontent.com/qaprosoft/qps-infra/master/docs/img/qps-infra.png?raw=true "QPS-Infra")
 
-## Contents
-* [Software prerequisites](#software-prerequisites)
-* [Initial setup](#initial-setup)
-* [Services start/stop/restart](#services-startstoprestart)
-* [Env details](#env-details)
-* [Documentation and free support](#documentation-and-free-support)
-
-## Documentation and free support
-* [Zafira manual](http://qaprosoft.github.io/zafira)
-* [Carina manual](http://qaprosoft.github.io/carina)
-* [Demo project](https://github.com/qaprosoft/carina-demo)
-* [Telegram channel](https://t.me/qps_infra)
-
 ## License
 Code - [Apache Software License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
