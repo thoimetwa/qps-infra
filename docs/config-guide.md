@@ -36,3 +36,9 @@
 
   ###### Trigger onPush Job(s)
    *  After any push or merge into the master onPush-repo job is launched, suites scanned, TestNG jobs created
+   
+### Troubleshooting
+
+### Support Channel
+
+* Join [Telegram channel](https://t.me/qps_infra) in case of any question
