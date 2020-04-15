@@ -15,18 +15,22 @@
      * Repository should be scanned and TestNG jobs created
      
 Create Repository:
- ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Repository.png?raw=true "epository")   
+ ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Repository.png?raw=true "Repository")   
      
 ##### onPullRequest Job/Event setup
 
 ###### Setup GitHub PullRequest plugin 
    * Open Jenkins -> Credentials
    * Update Username and Password for "ghprbhook-token" credentials
+   
+![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Credentials.png?raw=true "Credentials") 
 
 ###### Trigger onPullRequest Job(s)
    * Go to your GitHub repository
    * Create new Pull Request
         * Verify in Jenkins that onPullRequest-repo,onPullRequest-repo-trigger jobs launched and succeed
+        
+![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/PushJobs.png?raw=true "PushJobs")
         
 ##### onPush Job/Event setup
 
