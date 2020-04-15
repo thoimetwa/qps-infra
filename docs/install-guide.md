@@ -1,7 +1,7 @@
 # Installation Guide
 ## Software prerequisites
 * Docker requires a user with uid=1000 and gid=1000 for simple volumes sharing, etc.
-  Note: to verify the current user uid/gid, execute
+ > Note: to verify the current user uid/gid, execute
   ```
   id
   uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),102(netdev),999(docker
@@ -24,13 +24,13 @@ cd qps-infra
   * Web and mobile selenium hubs: selenium hub, ggr, selenoid
   * Local storage: ftp
   * Sonarqube: sonarqube
-<br>Note: It has sense to disable whole group. Also make sure to update depends_on in docker-compose and ./nginx/conf/default.conf to disable/comment services.
+> Note: It has sense to disable whole group. Also make sure to update depends_on in docker-compose and ./nginx/conf/default.conf to disable/comment services.
 
 ## Security setup  (strongly recommended for publicly available environments)
 * Regenerate AUTH_TOKEN_SECRET for production environment. (It should be base64 encoded value based on randomized string)
 * Regenerate CRYPTO_SALT value (it should be randomized alpha-numeric string)
 * Update default credentials in variables.env
-  Note: If you change RABBITMQ_USER and RABBITMQ_PASS, please, update them in config/definitions.json and config/logstash.conf files as well  
+  > Note: If you change RABBITMQ_USER and RABBITMQ_PASS, please, update them in config/definitions.json and config/logstash.conf files as well  
   
 ## Start services
 ```
@@ -43,10 +43,12 @@ cd qps-infra
 * [Selenium Grid - http://demo.qaprosoft.com/mcloud/grid/console](http://demo.qaprosoft.com/mcloud/grid/console)
 * [Zafira Reporting Tool - http://demo.qaprosoft.com/app](http://demo.qaprosoft.com/app)
 * [SonarQube - http://demo.qaprosoft.com/sonarqube](http://demo.qaprosoft.com/sonarqube)
-  Note: Use your host domain address or IP.
-  Note: admin/qaprosoft are hardcoded sonarqube credentials, and they can be updated inside the Sonar Administration panel
+ > Note: Use your host domain address or IP.
+ > Note: admin/qaprosoft are hardcoded sonarqube credentials, and they can be updated inside the Sonar Administration panel
   
 
-## Enjoy!
+## Troubleshooting
+
+## Support Channel
 
 * Join [Telegram channel](https://t.me/qps_infra) in case of any question
