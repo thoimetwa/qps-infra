@@ -6,14 +6,16 @@
 * Run "RegisterOrganization" providing your SCM (GitHub) organization name as folderName
      * New folder is created with default content
      
- Create organization:    (https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Organization.png)
+ Create organization: 
+ ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Organization.png?raw=true "Organization")
 
 #### Register Repository
 * Open your organization folder
 * Run "RegisterRepository" pointing to your TestNG repository (use https://github.com/qaprosoft/carina-demo as sample repo to scan)
      * Repository should be scanned and TestNG jobs created
      
-Create Repository:  (https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Repository.png)   
+Create Repository:
+ ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Repository.png?raw=true "epository")   
      
 ##### onPullRequest Job/Event setup
 
@@ -37,9 +39,9 @@ Create Repository:  (https://github.com/qaprosoft/qps-infra/blob/master/docs/img
    * Select application/json in "Content Type" field
    * Tick "Send me everything." option
    * Click "Add webhook" button
-
-  ###### Trigger onPush Job(s)
-   *  After any push or merge into the master onPush-repo job is launched, suites scanned, TestNG jobs created
+   
+###### Trigger onPush Job(s)
+ *  After any push or merge into the master onPush-repo job is launched, suites scanned, TestNG jobs created
    
 ### Troubleshooting
 
