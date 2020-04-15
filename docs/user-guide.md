@@ -121,3 +121,9 @@ Steps:
 * Open each TestNG suite xml file(s) and remove declaration of "jenkinsRegressionPipeline" property.
 * Commit and merge.
 * Ask your administrator to delete Cron job in Jenkins
+
+## Troubleshooting
+
+## Support Channel
+
+* Join [Telegram channel](https://t.me/qps_infra) in case of any question
