@@ -122,8 +122,8 @@ Steps:
 * Commit and merge.
 * Ask your administrator to delete Cron job in Jenkins
 
-## Troubleshooting
+### Troubleshooting
 
-## Support Channel
+### Support Channel
 
 * Join [Telegram channel](https://t.me/qps_infra) in case of any question
