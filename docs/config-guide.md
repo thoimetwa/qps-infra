@@ -5,11 +5,15 @@
 * Open Jenkins->Management_Jobs folder.
 * Run "RegisterOrganization" providing your SCM (GitHub) organization name as folderName
      * New folder is created with default content
+     
+ Create organization:    (https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Organization.png)
 
 #### Register Repository
 * Open your organization folder
 * Run "RegisterRepository" pointing to your TestNG repository (use https://github.com/qaprosoft/carina-demo as sample repo to scan)
      * Repository should be scanned and TestNG jobs created
+     
+Create Repository:  (https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Repository.png)   
      
 ##### onPullRequest Job/Event setup
 
