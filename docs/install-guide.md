@@ -17,13 +17,13 @@ git clone https://github.com/qaprosoft/qps-infra.git
 cd qps-infra
 ./setup.sh myhost.domain.com
 ```
-<ul> Optional: adjust docker-compose.yml file by removing unused services. By default, it contains such group of services:
-  <li> NGiNX WebServer: nginx
-  <li> Reporting Toolset: postgres, zafira/zafira-ui, rabbitmq, elasticsearch, redis, logstash
-  <li> CI: jenkins-master, jenkins-slave-web, jenkins-slave-api
-  <li> Web and mobile selenium hubs: selenium hub, ggr, selenoid
-  <li> Local storage: ftp
-  <li> Sonarqube: sonarqube
+</ul> Optional: adjust docker-compose.yml file by removing unused services. By default, it contains such group of services:
+    <li> NGiNX WebServer: nginx
+    <li> Reporting Toolset: postgres, zafira/zafira-ui, rabbitmq, elasticsearch, redis, logstash
+    <li> CI: jenkins-master, jenkins-slave-web, jenkins-slave-api
+    <li> Web and mobile selenium hubs: selenium hub, ggr, selenoid
+    <li> Local storage: ftp
+    <li> Sonarqube: sonarqube
 </ul>
 > Note: It has sense to disable whole group. Also make sure to update depends_on in docker-compose and ./nginx/conf/default.conf to disable/comment services.
 
@@ -40,10 +40,10 @@ cd qps-infra
 
 ## Env details
 * After QPS-Infra startup, the following components are available. Take a look at variables.env for default credentials:
-* [Jenkins - http://demo.qaprosoft.com/jenkins](http://demo.qaprosoft.com/jenkins)
-* [Selenium Grid - http://demo.qaprosoft.com/mcloud/grid/console](http://demo.qaprosoft.com/mcloud/grid/console)
-* [Zafira Reporting Tool - http://demo.qaprosoft.com/app](http://demo.qaprosoft.com/app)
-* [SonarQube - http://demo.qaprosoft.com/sonarqube](http://demo.qaprosoft.com/sonarqube)
+   * [Jenkins - http://demo.qaprosoft.com/jenkins](http://demo.qaprosoft.com/jenkins)
+   * [Selenium Grid - http://demo.qaprosoft.com/mcloud/grid/console](http://demo.qaprosoft.com/mcloud/grid/console)
+   * [Zafira Reporting Tool - http://demo.qaprosoft.com/app](http://demo.qaprosoft.com/app)
+   * [SonarQube - http://demo.qaprosoft.com/sonarqube](http://demo.qaprosoft.com/sonarqube)
  > Note: Use your host domain address or IP.
  > Note: admin/qaprosoft are hardcoded sonarqube credentials, and they can be updated inside the Sonar Administration panel
   
