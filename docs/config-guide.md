@@ -1,6 +1,7 @@
 # Configuration Guide
 ## SCM Integration
-For enterprise github or gitlab, you can declare the following global variables in Jenkins and the entire infrastructure will use them immediately by default: 
+   For enterprise github or gitlab, you can declare the following global variables in Jenkins and the entire infrastructure    will use them immediately by default:
+   
     * Manage jenkins -> Configure system
     * Global properties -> Add property
         * GITHUB_API_URL -> https://$GITHUB_HOST/api/v3
@@ -29,7 +30,7 @@ For enterprise github or gitlab, you can declare the following global variables 
   *  Save changes
 > Note: be sure to test integration through the Jenkins UI
 
- ###### Test the integration with Github through the Jenkins UI
+###### Test the integration with Github through the Jenkins UI
    *  Set Credentials -> Test basic connection to GitHub
    *  Set Repository owner/name -> Test Permissions to a Repository
    *  Set Issue ID/Comment -> Test adding comment to Pull Request
