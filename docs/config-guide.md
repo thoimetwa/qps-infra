@@ -1,16 +1,14 @@
 # Configuration Guide
 ## SCM Integration
-
-For enterprise github or gitlab, you can declare the following global variables in Jenkins and the entire infrastructure will use them immediately by default:
-</br>
-  * Manage jenkins -> Configure system
-  * Global properties -> Add property
-      * GITHUB_API_URL -> https://$GITHUB_HOST/api/v3
-      * GITHUB_HOST -> github.mydomain.com
-      * GITHUB_HTML_URL -> https://$GITHUB_HOST/$GITHUB_ORGANIZATION
-      * GITHUB_ORGANIZATION -> myorganization
-      * GITHUB_SSH_URL -> git@$GITHUB_HOST:$GITHUB_ORGANIZATION
-     
+For enterprise github or gitlab, you can declare the following global variables in Jenkins and the entire infrastructure will use them immediately by default: 
+   * Manage jenkins -> Configure system
+   * Global properties -> Add property
+       * GITHUB_API_URL -> https://$GITHUB_HOST/api/v3
+       * GITHUB_HOST -> github.mydomain.com
+       * GITHUB_HTML_URL -> https://$GITHUB_HOST/$GITHUB_ORGANIZATION
+       * GITHUB_ORGANIZATION -> myorganization
+       * GITHUB_SSH_URL -> git@$GITHUB_HOST:$GITHUB_ORGANIZATION
+      
 ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Enterprise.png?raw=true "Enterprise")
 
 #### onPullRequest Job/Event setup
@@ -41,23 +39,22 @@ For enterprise github or gitlab, you can declare the following global variables 
 ##### Send Pull request to launch onPullRequest Job(s)
    * Go to your GitHub repository
    * Create new Pull Request
-        * Verify in Jenkins that onPullRequest-repo,onPullRequest-repo-trigger jobs launched and succeed
-        
+        * Verify in Jenkins that onPullRequest-repo,onPullRequest-repo-trigger jobs launched and succeed        
 ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/PushJobs.png?raw=true "PushJobs")
 
 ## Organization Setup        
 ### Register Organization
-* Open Jenkins->Management_Jobs folder.
-* Run "RegisterOrganization" providing your SCM (GitHub) organization name as folderName
-     * New folder is created with default content
+  * Open Jenkins->Management_Jobs folder.
+  * Run "RegisterOrganization" providing your SCM (GitHub) organization name as folderName
+      * New folder is created with default content
      
  Create organization: 
  ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Organization.png?raw=true "Organization")
 
 #### Register Repository
-* Open your organization folder
-* Run "RegisterRepository" pointing to your TestNG repository (use https://github.com/qaprosoft/carina-demo as sample repo to scan)
-     * Repository should be scanned and TestNG jobs created
+   * Open your organization folder
+   * Run "RegisterRepository" pointing to your TestNG repository (use https://github.com/qaprosoft/carina-demo as sample repo to scan)
+      * Repository should be scanned and TestNG jobs created
      
 Create Repository:
  ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Repository.png?raw=true "Repository")       
@@ -75,10 +72,10 @@ Create Repository:
    * Click "Add webhook" button
    
 ###### Trigger onPush Job(s)
- *  After any push or merge into the master onPush-repo job is launched, suites scanned, TestNG jobs created
+   *  After any push or merge into the master onPush-repo job is launched, suites scanned, TestNG jobs created
    
 ## Troubleshooting
 
 ## Support Channel
 
-* Join [Telegram channel](https://t.me/qps_infra) in case of any question
+  * Join [Telegram channel](https://t.me/qps_infra) in case of any question
