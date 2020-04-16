@@ -1,22 +1,21 @@
 # Configuration Guide
-## Organization Setup
-
-### SCM Integration
+## SCM Integration
 #### onPullRequest Job/Event setup
 
-###### Setup GitHub PullRequest plugin 
+##### Setup GitHub PullRequest plugin 
    * Open Jenkins -> Credentials
    * Update Username and Password for "ghprbhook-token" credentials
    
 ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Credentials.png?raw=true "Credentials") 
 
-###### Trigger onPullRequest Job(s)
+##### Trigger onPullRequest Job(s)
    * Go to your GitHub repository
    * Create new Pull Request
         * Verify in Jenkins that onPullRequest-repo,onPullRequest-repo-trigger jobs launched and succeed
         
 ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/PushJobs.png?raw=true "PushJobs")
-        
+
+## Organization Setup        
 ### Register Organization
 * Open Jenkins->Management_Jobs folder.
 * Run "RegisterOrganization" providing your SCM (GitHub) organization name as folderName
