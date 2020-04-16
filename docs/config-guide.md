@@ -1,5 +1,15 @@
 # Configuration Guide
 ## SCM Integration
+> Note: For enterprise github or gitlab, you can declare the following global variables in Jenkins and the entire infrastructure will use them immediately by default.
+  * Manage jenkins ->Configure system
+  * Global properties -> Add property:
+     * GITHUB_API_URL -> https://$GITHUB_HOST/api/v3
+     * GITHUB_HOST -> github.mydomain.com
+     * GITHUB_HTML_URL -> https://$GITHUB_HOST/$GITHUB_ORGANIZATION
+     * GITHUB_ORGANIZATION -> myorganization
+     * GITHUB_SSH_URL -> git@$GITHUB_HOST:$GITHUB_ORGANIZATION
+![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Enterprise.png?raw=true "Enterprise")
+
 #### onPullRequest Job/Event setup
 
 ##### Setup GitHub PullRequest plugin 
