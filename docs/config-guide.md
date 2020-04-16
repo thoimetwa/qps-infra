@@ -18,8 +18,12 @@
   *  Save changes
 > Note: be sure to test integration through the Jenkins UI
 
- ###### How to test the integration through the Jenkins UI
-  
+ ###### Test the integration with Github through the Jenkins UI
+   *  Set Credentials -> Test basic connection to GitHub
+   *  Set Repository owner/name -> Test Permissions to a Repository
+   *  Set Issue ID/Comment -> Test adding comment to Pull Request
+
+![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/TestGithub.png?raw=true "TestGithub") 
 
 ##### Send Pull request to launch onPullRequest Job(s)
    * Go to your GitHub repository
