@@ -1,7 +1,9 @@
 # Installation Guide
 
 ## Hardware requirements/prerequisites
-
+Recommended:
+* Linux Ubuntu (8+ core, 32RAM, SSD 512Gb+)
+### MCloud hardware requirements
  
 ## Software requirements/prerequisites
 * Docker requires a user with uid=1000 and gid=1000 for simple volumes sharing, etc.
