@@ -83,9 +83,9 @@
      <li> [Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
      <li> [MacOS](https://pilsniak.com/how-to-install-docker-on-mac-os-using-brew/)
   </ul>
- <li> Install docker-composer
+ <li> Install docker-composer [docker-composer](https://docs.docker.com/compose/install/#install-compose)
 </ul>
- [docker-composer](https://docs.docker.com/compose/install/#install-compose)
+ 
 
 ## Initial setup
 * Clone [qps-infra](https://github.com/qaprosoft/qps-infra). You can also create your private repo to migrate the infrastructure easily
