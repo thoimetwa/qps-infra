@@ -1,9 +1,9 @@
 # Configuration Guide
 ## SCM Integration
   For enterprise github or gitlab, you can declare the following global variables in Jenkins and the entire infrastructure    will use them immediately by default:
- <li> 
-   * Manage jenkins -> Configure system 
-   * Global properties -> Add property 
+ <li>
+  * Manage jenkins -> Configure system 
+  * Global properties -> Add property 
      * GITHUB_API_URL -> https://$GITHUB_HOST/api/v3 
      * GITHUB_HOST -> github.mydomain.com 
      * GITHUB_HTML_URL -> https://$GITHUB_HOST/$GITHUB_ORGANIZATION 
