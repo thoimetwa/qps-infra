@@ -2,64 +2,80 @@
 
 ## Hardware requirements/prerequisites
 **Recommended:**
-* Linux Ubuntu (8+ core, 32RAM, SSD 512Gb+)
+<ul>
+<li> Linux Ubuntu (8+ core, 32RAM, SSD 512Gb+)
+</ul>
 ### MCloud hardware requirements
 **CPU**
-* product: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
-* vendor: Intel Corp.
-* physical id: 4b
-* bus info: cpu@0
-* version: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
-* serial: To Be Filled By O.E.M.
-* slot: LGA1151
-* size: 2462MHz
-* capacity: 4005MHz
-* width: 64 bits
-* clock: 100MHz
+<ul>
+<li> product: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+<li> vendor: Intel Corp.
+<li> physical id: 4b
+<li> bus info: cpu@0
+<li> version: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+<li> serial: To Be Filled By O.E.M.
+<li> slot: LGA1151
+<li> size: 2462MHz
+<li> capacity: 4005MHz
+<li> width: 64 bits
+<li> clock: 100MHz
+ </ul>
 **Motherboard**
-* SMBIOS 3.0.0 present.
-* Handle 0x0002, DMI type 2, 15 bytes
-* Base Board Information
-  * Manufacturer: ASUSTeK COMPUTER INC.
-  * Product Name: PRIME H270M-PLUS
-  * Version: Rev X.0x
-  * Serial Number: 161292411902325
-  * Asset Tag: Default string
-* Features:
-  * Board is a hosting board
-  * Board is replaceable
-* Location In Chassis: Default string
-* Chassis Handle: 0x0003
-* Type: Motherboard
-* Contained Object Handles: 0
+<ul>
+<li> SMBIOS 3.0.0 present.
+<li> Handle 0x0002, DMI type 2, 15 bytes
+<li> Base Board Information
+ <ul>
+  <li> Manufacturer: ASUSTeK COMPUTER INC.
+  <li> Product Name: PRIME H270M-PLUS
+  <li> Version: Rev X.0x
+  <li> Serial Number: 161292411902325
+  <li> Asset Tag: Default string
+ </ul>
+<li> Features:
+ <ul>
+  <li> Board is a hosting board
+  <li> Board is replaceable
+  <ul>
+<li> Location In Chassis: Default string
+<li> Chassis Handle: 0x0003
+<li> Type: Motherboard
+<li> Contained Object Handles: 0
+ </ul>
 **RAM**
-* X2 - Kingston 16GB 2133 MHz
-* Array Handle: 0x0042
-  * Error Information Handle: Not Provided
-  * Total Width: 64 bits
-  * Data Width: 64 bits
-  * Size: 16384 MB
-  * Form Factor: DIMM
-  * Set: None
-  * Locator: ChannelA-DIMM2
-  * Bank Locator: BANK 1
-  * Type: DDR4
-  * Type Detail: Synchronous
-  * Speed: 2133 MHz
-  * Manufacturer: Kingston
-  * Serial Number: 193A2FD5
-  * Asset Tag: 9876543210
-  * Part Number: 9905625-065.A00G    
-  * Rank: 2
-  * Configured Clock Speed: 2133 MHz
-  * Minimum Voltage: 1.2 V
-  * Maximum Voltage: 1.2 V
-  * Configured Voltage: 1.2 V
+<ul>
+<li> X2 - Kingston 16GB 2133 MHz
+<li> Array Handle: 0x0042
+ <ul>
+  <li> Error Information Handle: Not Provided
+  <li> Total Width: 64 bits
+  <li> Data Width: 64 bits
+  <li> Size: 16384 MB
+  <li> Form Factor: DIMM
+  <li> Set: None
+  <li> Locator: ChannelA-DIMM2
+  <li> Bank Locator: BANK 1
+  <li> Type: DDR4
+  <li> Type Detail: Synchronous
+  <li> Speed: 2133 MHz
+  <li> Manufacturer: Kingston
+  <li> Serial Number: 193A2FD5
+  <li> Asset Tag: 9876543210
+  <li> Part Number: 9905625-065.A00G    
+  <li> Rank: 2
+  <li> Configured Clock Speed: 2133 MHz
+  <li> Minimum Voltage: 1.2 V
+  <li> Maximum Voltage: 1.2 V
+  <li> Configured Voltage: 1.2 V
+ </ul>
+</ul>
   **SSD**
-  * Model Number:       KINGSTON SHFS37A480G                    
-  * Serial Number:      50026B726900792F    
-  * Firmware Revision:  603ABBF0
-  * Transport:          Serial, ATA8-AST, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+  <ul>
+  <li> Model Number:       KINGSTON SHFS37A480G                    
+  <li> Serial Number:      50026B726900792F    
+  <li> Firmware Revision:  603ABBF0
+  <li> Transport:          Serial, ATA8-AST, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
+  </ul>
  
 ## Software requirements/prerequisites
 * Docker requires a user with uid=1000 and gid=1000 for simple volumes sharing, etc.
