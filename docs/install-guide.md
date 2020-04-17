@@ -3,6 +3,7 @@
 ## Hardware requirements/prerequisites
 **Recommended:**
 <ul><li> Linux Ubuntu (8+ core, 32RAM, SSD 512Gb+)</ul>
+
 ### MCloud hardware requirements
 **CPU**
 <ul>
@@ -31,10 +32,8 @@
    <li> Asset Tag: Default string
   </ul>
 <li> Features:
-  <ul>
-   <li> Board is a hosting board
-   <li> Board is replaceable
-   </ul>
+  <ul> <li> Board is a hosting board
+   <li> Board is replaceable </ul>   
 <li> Location In Chassis: Default string
 <li> Chassis Handle: 0x0003
 <li> Type: Motherboard
@@ -68,12 +67,10 @@
  </ul>
 </ul>
  **SSD**
-  <ul>
-  <li> Model Number:       KINGSTON SHFS37A480G                    
-  <li> Serial Number:      50026B726900792F    
-  <li> Firmware Revision:  603ABBF0
-  <li> Transport:          Serial, ATA8-AST, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
-  </ul>
+ <ul> <li> Model Number: KINGSTON SHFS37A480G                    
+  <li> Serial Number: 50026B726900792F    
+  <li> Firmware Revision: 603ABBF0
+  <li> Transport: Serial, ATA8-AST, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0   </ul>
  
 ## Software requirements/prerequisites
 * Docker requires a user with uid=1000 and gid=1000 for simple volumes sharing, etc.
