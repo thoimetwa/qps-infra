@@ -4,11 +4,13 @@
  <ul>
    <li>  Manage jenkins -> Configure system 
    <li>  Global properties -> Add property 
+       <ul>
        <li> GITHUB_API_URL -> https://$GITHUB_HOST/api/v3 
        <li> GITHUB_HOST -> github.mydomain.com 
        <li> GITHUB_HTML_URL -> https://$GITHUB_HOST/$GITHUB_ORGANIZATION 
        <li> GITHUB_ORGANIZATION -> myorganization 
        <li> GITHUB_SSH_URL -> git@$GITHUB_HOST:$GITHUB_ORGANIZATION 
+       </ul>   
  </ul>    
 ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Enterprise.png?raw=true "Enterprise") 
 
