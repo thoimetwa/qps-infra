@@ -12,13 +12,14 @@ Recommended:
   id
   uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),102(netdev),999(docker
   ```
-* Install docker 
-<ui>
-  <li> [Ubuntu 16.04](http://www.techrepublic.com/article/how-to-install-docker-on-ubuntu-16-04/)
-  <li> [Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
-  <li> [MacOS](https://pilsniak.com/how-to-install-docker-on-mac-os-using-brew/)
- </ui>
-  
+<ul>
+  <li> Install docker 
+  <ul>
+    <li> [Ubuntu 16.04](http://www.techrepublic.com/article/how-to-install-docker-on-ubuntu-16-04/)
+     <li> [Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
+     <li> [MacOS](https://pilsniak.com/how-to-install-docker-on-mac-os-using-brew/)
+  </ul>
+</ul>
 * Install docker-composer
  [docker-composer](https://docs.docker.com/compose/install/#install-compose)
 
