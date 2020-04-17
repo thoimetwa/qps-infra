@@ -1,9 +1,65 @@
 # Installation Guide
 
 ## Hardware requirements/prerequisites
-Recommended:
+**Recommended:**
 * Linux Ubuntu (8+ core, 32RAM, SSD 512Gb+)
 ### MCloud hardware requirements
+**CPU**
+* product: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+* vendor: Intel Corp.
+* physical id: 4b
+* bus info: cpu@0
+* version: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+* serial: To Be Filled By O.E.M.
+* slot: LGA1151
+* size: 2462MHz
+* capacity: 4005MHz
+* width: 64 bits
+* clock: 100MHz
+**Motherboard**
+* SMBIOS 3.0.0 present.
+* Handle 0x0002, DMI type 2, 15 bytes
+* Base Board Information
+  * Manufacturer: ASUSTeK COMPUTER INC.
+  * Product Name: PRIME H270M-PLUS
+  * Version: Rev X.0x
+  * Serial Number: 161292411902325
+  * Asset Tag: Default string
+* Features:
+  * Board is a hosting board
+  * Board is replaceable
+* Location In Chassis: Default string
+* Chassis Handle: 0x0003
+* Type: Motherboard
+* Contained Object Handles: 0
+**RAM**
+* X2 - Kingston 16GB 2133 MHz
+* Array Handle: 0x0042
+  * Error Information Handle: Not Provided
+  * Total Width: 64 bits
+  * Data Width: 64 bits
+  * Size: 16384 MB
+  * Form Factor: DIMM
+  * Set: None
+  * Locator: ChannelA-DIMM2
+  * Bank Locator: BANK 1
+  * Type: DDR4
+  * Type Detail: Synchronous
+  * Speed: 2133 MHz
+  * Manufacturer: Kingston
+  * Serial Number: 193A2FD5
+  * Asset Tag: 9876543210
+  * Part Number: 9905625-065.A00G    
+  * Rank: 2
+  * Configured Clock Speed: 2133 MHz
+  * Minimum Voltage: 1.2 V
+  * Maximum Voltage: 1.2 V
+  * Configured Voltage: 1.2 V
+  **SSD**
+  * Model Number:       KINGSTON SHFS37A480G                    
+  * Serial Number:      50026B726900792F    
+  * Firmware Revision:  603ABBF0
+  * Transport:          Serial, ATA8-AST, SATA 1.0a, SATA II Extensions, SATA Rev 2.5, SATA Rev 2.6, SATA Rev 3.0
  
 ## Software requirements/prerequisites
 * Docker requires a user with uid=1000 and gid=1000 for simple volumes sharing, etc.
@@ -12,6 +68,7 @@ Recommended:
   id
   uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),102(netdev),999(docker
   ```
+  ***
 <ul>
   <li> Install docker 
   <ul>
@@ -19,8 +76,8 @@ Recommended:
      <li> [Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
      <li> [MacOS](https://pilsniak.com/how-to-install-docker-on-mac-os-using-brew/)
   </ul>
+ <li> Install docker-composer
 </ul>
-* Install docker-composer
  [docker-composer](https://docs.docker.com/compose/install/#install-compose)
 
 ## Initial setup
