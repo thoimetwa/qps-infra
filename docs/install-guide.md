@@ -32,12 +32,12 @@
    <li> Asset Tag: Default string
   </ul>
 <li> Features:
-<ul> <li> Board is a hosting board
+<ul><li> Board is a hosting board
 <li> Board is replaceable</ul>   
 <li> Location In Chassis: Default string
 <li> Chassis Handle: 0x0003
 <li> Type: Motherboard
-<li> Contained Object Handles: 0 </ul>
+<li> Contained Object Handles: 0</ul>
 **RAM**
 <ul><li> X2 - Kingston 16GB 2133 MHz
 <li> Array Handle: 0x0042
