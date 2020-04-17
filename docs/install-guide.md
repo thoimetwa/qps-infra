@@ -2,9 +2,7 @@
 
 ## Hardware requirements/prerequisites
 **Recommended:**
-<ul>
-<li> Linux Ubuntu (8+ core, 32RAM, SSD 512Gb+)
-</ul>
+<ul><li> Linux Ubuntu (8+ core, 32RAM, SSD 512Gb+)</ul>
 ### MCloud hardware requirements
 **CPU**
 <ul>
@@ -25,23 +23,23 @@
 <li> SMBIOS 3.0.0 present.
 <li> Handle 0x0002, DMI type 2, 15 bytes
 <li> Base Board Information
- <ul>
-  <li> Manufacturer: ASUSTeK COMPUTER INC.
-  <li> Product Name: PRIME H270M-PLUS
-  <li> Version: Rev X.0x
-  <li> Serial Number: 161292411902325
-  <li> Asset Tag: Default string
- </ul>
-<li> Features:
- <ul>
-  <li> Board is a hosting board
-  <li> Board is replaceable
   <ul>
+   <li> Manufacturer: ASUSTeK COMPUTER INC.
+   <li> Product Name: PRIME H270M-PLUS
+   <li> Version: Rev X.0x
+   <li> Serial Number: 161292411902325
+   <li> Asset Tag: Default string
+  </ul>
+<li> Features:
+  <ul>
+   <li> Board is a hosting board
+   <li> Board is replaceable
+   </ul>
 <li> Location In Chassis: Default string
 <li> Chassis Handle: 0x0003
 <li> Type: Motherboard
 <li> Contained Object Handles: 0
- </ul>
+</ul>
 **RAM**
 <ul>
 <li> X2 - Kingston 16GB 2133 MHz
@@ -69,7 +67,7 @@
   <li> Configured Voltage: 1.2 V
  </ul>
 </ul>
-  **SSD**
+ **SSD**
   <ul>
   <li> Model Number:       KINGSTON SHFS37A480G                    
   <li> Serial Number:      50026B726900792F    
