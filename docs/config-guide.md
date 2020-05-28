@@ -73,23 +73,6 @@ Create Repository:
         * Verify in Jenkins that onPullRequest-repo,onPullRequest-repo-trigger jobs launched and succeed        
 ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/PushJobs.png?raw=true "PushJobs")
 
-## Organization Setup        
-### Register Organization
-  * Open Jenkins->Management_Jobs folder.
-  * Run "RegisterOrganization" providing your SCM (GitHub) organization name as folderName
-      * New folder is created with default content
-     
- Create organization: 
- ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Organization.png?raw=true "Organization")
-
-#### Register Repository
-   * Open your organization folder
-   * Run "RegisterRepository" pointing to your TestNG repository (use https://github.com/qaprosoft/carina-demo as sample repo to scan)
-      * Repository should be scanned and TestNG jobs created
-     
-Create Repository:
- ![Alt text](https://github.com/qaprosoft/qps-infra/blob/master/docs/img/Repository.png?raw=true "Repository")       
-
 ##### onPush Job/Event setup
 
 ###### Setup GitHub WebHook
@@ -121,19 +104,19 @@ To enable sonarqube integration it is needed to have the following components co
    
    ![Alt text](https://github.com/qaprosoft/qps-infra/blob/sonarqube-docs/docs/img/jenkins-sonar-sv-config.png?raw=true "sonar-sv-config")
   ### SonarQube configuration file
-  For enabling static code analysis create a file named **.sonarqube**  in your project root directory and add the following properties(example from carina-demo):
+  For enabling static code analysis create a file named **.sonarqube**  in your project root directory and add the following properties(example from [carina-demo](https://github.com/qaprosoft/carina-demo/blob/master/.sonarqube)):
   ```
   sonar.projectBaseDir=.
   sonar.projectName=carina-demo
   sonar.projectKey=carina-demo
   sonar.java.source=1.8
-  sonar.sources=src/main
-  sonar.tests=src/test
+  sonar.sources=src
   sonar.java.binaries=target/classes
   sonar.junit.reportPaths=target/surefire-reports
   ```
-  For multi-module maven projects add the following property to the above file(example from carina):
+  For multi-module maven projects add the following property to the above file(example from [carina](https://github.com/qaprosoft/carina/blob/master/.sonarqube)):
   ```
+  sonar.java.test.binaries=target/test-classes
   sonar.modules=carina-api,carina-aws-s3,carina-commons,carina-core,carina-crypto,carina-
   dataprovider,carina-appcenter,carina-proxy,carina-reporting,carina-utils,carina-webdriver
   ```
@@ -142,14 +125,10 @@ To enable sonarqube integration it is needed to have the following components co
   ### Pull request decoration
   In order to enable pull request decoration(auto comments with sonar issues in the pr) follow the next steps:
 
-   * Navigate to your jenkins instance global configuration page
-   * In the global properties section add new variable with the followings params:
-       ```
-       name = GITHUB_OAUTH_TOKEN 
-       value = your github token
-       ```
-> Note: be sure that the token you are using has writing permission over the repository you are analysing.
-
+   * Create a new token for your github account with the following permissions
+   ![Alt text](https://github.com/qaprosoft/qps-infra/blob/%23174/docs/img/Github-sonar-token.png?raw=true "github-sonar-token")
+   * When running registerOrganization job add the generated token under **sonarGithubOAuth**
+   ![Alt text](https://github.com/qaprosoft/qps-infra/blob/%23174/docs/img/RegisterOrganization.png?raw=true "register-organization")
    After each pull request created/reopened in line comments will be published with the user linked to the provided github token. 
 
 ## Troubleshooting
